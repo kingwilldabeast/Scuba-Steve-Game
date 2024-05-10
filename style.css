@@ -1,7 +1,27 @@
 body {
     display: flex;
-    display: flexbox;
+    justify-content: flex-start;
+    max-width: 500px; 
+    max-height: 500px;
     background-image: url('https://t4.ftcdn.net/jpg/06/36/46/61/360_F_636466127_GJJJ2Z1fVXe0tsblsbOHB2uKkNhcJOES.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+}
+#submitButton {
+    display: flex;
+    display: block;
+}
+.opening {
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    color: #ffffff;
+    background-color: cadetblue;
+    border-radius: 4px;
+    border: 2px solid aquamarine;
 }
