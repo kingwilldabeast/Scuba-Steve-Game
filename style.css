@@ -7,9 +7,14 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+input {
+    width: 60px;
+    height: 30px;
+}
 #submitButton {
     display: flex;
-    display: block;
+    width: 60px;
+    height: 30px;
 }
 .opening {
     padding: 0;
