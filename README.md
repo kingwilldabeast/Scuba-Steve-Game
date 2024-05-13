@@ -1,4 +1,4 @@
-<img src=“WF1.png”>
+<img src=“./WF1.png”>
 
 # Lets Play Scuba-Steve
 Object: Help Scuba Steve guess the secret word before he gains too many heads. Each letter guessed will be evaluated as truthy/falsy till the game results in a win or a loss.

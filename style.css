@@ -1,15 +1,20 @@
 body {
     display: flex;
-    justify-content: flex-start;
-    max-width: 500px; 
-    max-height: 500px;
+    flex-flow: column wrap;
+    justify-content: center;
     background-image: url('https://t4.ftcdn.net/jpg/06/36/46/61/360_F_636466127_GJJJ2Z1fVXe0tsblsbOHB2uKkNhcJOES.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    color:white;
+}
+h1, h3 {
+    display: flex;
+    justify-content: center;
 }
 input {
-    width: 60px;
+    width: 30px;
     height: 30px;
+    text-align: center;
 }
 #submitButton {
     display: flex;
@@ -17,18 +22,21 @@ input {
     height: 30px;
 }
 .opening {
-    padding: 0;
-    width: 20px;
-    height: 20px;
-    font-size: 24px;
     display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-between;
+    flex-direction: flex-end;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    justify-content: center;
     color: #ffffff;
     background-color: cadetblue;
     border-radius: 4px;
     border: 2px solid aquamarine;
+}
+ul{
+    display: flex;
+    justify-content:center;
 }
 video {
     width: 200px;
