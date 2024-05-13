@@ -1,5 +1,6 @@
 const maxWrong = 4;
 const boardLength = 12;
+const skull = [1,2,3,4]
 const loser = `Better Luck Next Time!`
 const button = document.querySelector(`#submitButton`);
 // This is the set array for the game that will help us index each letter
@@ -10,7 +11,6 @@ let correct = 0;
 button.addEventListener (`click`, (event) => {
     let input = document.querySelector(`#textInput`).value;
     for (let i = 0; i < secretWord.length; i++) {
-        console.log("2");
         if (input == secretWord[i]) {
             document.querySelectorAll(`li`)[i].innerText = input;
             correct++;
@@ -23,18 +23,13 @@ button.addEventListener (`click`, (event) => {
             document.querySelector(`h3`).innerText = loser
         }
         //  url("https://www.veed.io/view/04d95098-2c35-469d-9436-ae461120f946?panel=share")
-        
-        document.querySelector(`b`).innerText = wrong
+        document.querySelector(`b`).innerText = wrong   
     }
-    // if (input == secretWord) {
-    //     document.querySelectorAll(`li`)[0].innerText = input;
-    // }
-    // if (input == `p`) {
-    //     document.querySelectorAll('li')[2].innerText = input;
-    //     document.querySelectorAll('li')[3].innerText = input;
-    //     document.querySelectorAll('li')[5].innerText = input;
-    // }
-}
+    for (let i = 0; i < skull.length; i++) {
+        if (wrong >= skull[i]) {
+        document.querySelectorAll(`.strike`)[i].innerText = `💀`;
+    }}
+}   
 )
 
 // This will be the loop that we use for each guessed letter to try to find a match
@@ -42,9 +37,6 @@ button.addEventListener (`click`, (event) => {
 function limit (maxWrong) {
     
 }
-
-// function render () {
-//     updateBoard()
-// }
+function restart () {}
 // function init () {}
 // init();

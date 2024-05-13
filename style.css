@@ -1,8 +1,9 @@
 body {
     display: flex;
     flex-flow: column wrap;
+    align-items: center;
     justify-content: center;
-    background-image: url('https://t4.ftcdn.net/jpg/06/36/46/61/360_F_636466127_GJJJ2Z1fVXe0tsblsbOHB2uKkNhcJOES.jpg');
+    background-image: url('https://as2.ftcdn.net/v2/jpg/07/96/20/99/1000_F_796209993_FHnGLKxG7ZdzIizN4Y5QBKAcTA8QqJDU.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     color:white;
@@ -11,15 +12,31 @@ h1, h3 {
     display: flex;
     justify-content: center;
 }
+h4{
+    display: flex;
+    margin: 1px;
+    justify-content: center;
+}
+img {
+    display: flex;
+    flex-direction: flex-start; 
+    width:200px;
+    height:300px;
+}
 input {
-    width: 30px;
+    display:flex;
+    justify-content: center;
+    width: 100px;
     height: 30px;
     text-align: center;
 }
 #submitButton {
     display: flex;
+    justify-content: center;
+    align-content: center;
     width: 60px;
     height: 30px;
+    border-radius: 40%;
 }
 .opening {
     display: flex;
@@ -31,6 +48,19 @@ input {
     justify-content: center;
     color: #ffffff;
     background-color: cadetblue;
+    border-radius: 4px;
+    border: 2px solid aquamarine;
+}
+.strike {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    justify-content: flex-start;
+    color: #ffffff;
+    background-color: rgb(237, 242, 242);
     border-radius: 4px;
     border: 2px solid aquamarine;
 }
