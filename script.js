@@ -16,7 +16,7 @@ button.addEventListener (`click`, (event) => {
             correct++;
         } 
     } 
-    if (correct === secretWord.length) {document.querySelector(`h3`).innerText =`Congratulaions!`}
+    if (correct === secretWord.length) {document.querySelector(`h3`).innerText =`Congratulations!`}
     if (!secretWord.includes(input)){
         wrong = wrong + 1 
         if (wrong == maxWrong) {
