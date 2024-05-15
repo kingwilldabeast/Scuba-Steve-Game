@@ -1,7 +1,7 @@
 const maxWrong = 4;
 const boardLength = 12;
 const skull = [1,2,3,4]
-const loser = `Better Luck Next Time!`
+const loser = `Defeated! 😭`
 const winner = `Congratulations!`
 const button = document.querySelector(`#submitButton`);
 // This is the set array for the game that will help us index each letter
@@ -24,6 +24,7 @@ button.addEventListener (`click`, (event) => {
         if (wrong == maxWrong) {
             document.querySelector(`h3`).innerText = loser;
             setTimeout(() => restart(loser), 15000);
+            document.querySelector("video").style.opacity = 1
             document.querySelector("video").play();
             // https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
             // https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide
@@ -39,6 +40,8 @@ button.addEventListener (`click`, (event) => {
 )
 
 function restart (game) { 
-    if (game === loser || winner) {window.location.reload();
+    if (game === loser || winner) {
+        document.querySelector("video").style.opacity = 1
+        window.location.reload();
     }
 }
