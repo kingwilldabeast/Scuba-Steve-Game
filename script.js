@@ -18,13 +18,15 @@ button.addEventListener (`click`, (event) => {
         } 
     } 
     if (correct === secretWord.length) {document.querySelector(`h3`).innerText = winner;
-    restart(winner);}
+    setTimeout(() => restart(winner), 5000)}
     if (!secretWord.includes(input)){
         wrong = wrong + 1 
         if (wrong == maxWrong) {
             document.querySelector(`h3`).innerText = loser;
-            setTimeout(() => restart(loser), 5000);
-            https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
+            setTimeout(() => restart(loser), 15000);
+            document.querySelector("video").play();
+            // https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
+            // https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide
         }
         //  url("https://www.veed.io/view/04d95098-2c35-469d-9436-ae461120f946?panel=share")
         document.querySelector(`b`).innerText = wrong   
