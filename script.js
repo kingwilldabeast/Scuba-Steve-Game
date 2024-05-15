@@ -2,6 +2,7 @@ const maxWrong = 4;
 const boardLength = 12;
 const skull = [1,2,3,4]
 const loser = `Better Luck Next Time!`
+const winner = `Congratulations!`
 const button = document.querySelector(`#submitButton`);
 // This is the set array for the game that will help us index each letter
 const secretWord = ['h','i','p','p','o','p','o','t','a','m','u','s'];
@@ -16,7 +17,7 @@ button.addEventListener (`click`, (event) => {
             correct++;
         } 
     } 
-    if (correct === secretWord.length) {document.querySelector(`h3`).innerText =`Congratulations!`}
+    if (correct === secretWord.length) {document.querySelector(`h3`).innerText = winner}
     if (!secretWord.includes(input)){
         wrong = wrong + 1 
         if (wrong == maxWrong) {
@@ -32,11 +33,9 @@ button.addEventListener (`click`, (event) => {
 }   
 )
 
-// This will be the loop that we use for each guessed letter to try to find a match
-
 function limit (maxWrong) {
     
 }
-function restart () {}
-// function init () {}
-// init();
+function restart (game) { 
+    if (game == loser || winner) {location.reload()}
+}
