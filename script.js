@@ -17,11 +17,14 @@ button.addEventListener (`click`, (event) => {
             correct++;
         } 
     } 
-    if (correct === secretWord.length) {document.querySelector(`h3`).innerText = winner}
+    if (correct === secretWord.length) {document.querySelector(`h3`).innerText = winner;
+    restart(winner);}
     if (!secretWord.includes(input)){
         wrong = wrong + 1 
         if (wrong == maxWrong) {
-            document.querySelector(`h3`).innerText = loser
+            document.querySelector(`h3`).innerText = loser;
+            setTimeout(() => restart(loser), 5000);
+            https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
         }
         //  url("https://www.veed.io/view/04d95098-2c35-469d-9436-ae461120f946?panel=share")
         document.querySelector(`b`).innerText = wrong   
@@ -33,9 +36,7 @@ button.addEventListener (`click`, (event) => {
 }   
 )
 
-function limit (maxWrong) {
-    
-}
 function restart (game) { 
-    if (game == loser || winner) {location.reload()}
+    if (game === loser || winner) {window.location.reload();
+    }
 }
