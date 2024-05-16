@@ -1,8 +1,13 @@
 <img src=“./WF1.png”>
 
 # Lets Play Scuba-Steve
-Object: Help Scuba Steve guess the secret word before he gains too many heads. Each letter guessed will be evaluated as truthy/falsy till the game results in a win or a loss.
-## How to Play
+**Object:** Help Scuba Steve guess the secret word before he gains too many heads. Each letter guessed will be evaluated as truthy/falsy till the game results in a win or a loss.
+**Utilization:** Helps build and increase the effective use of Javascript, CSS, and HTML
+
+### Getting started:
+Download 
+Go-Live in Html
+## Usage - How to play:
 1. Players can take turns or work together. 
 
 >Gameplay continues until the players guess the word or they run out of guesses and the heads have constructed their figure.
@@ -23,34 +28,32 @@ Object: Help Scuba Steve guess the secret word before he gains too many heads. E
 
 ***This is a letter by letter game. So fill in the blanks individually guessing the whole word at once will not be logged.***
 
+## Table of contents:
+
 ## Development Setup & Tools
 Begin by designing a wireframe.
+Create an game flow outline for your game.
+Brainstorm the variables needed and functions for each step.
 
-### Tools needed to make the game
+### Built with:
 1. Javascript
 2. CSS
 3. HTMl
+4. VEED.io (mp4)
 
-### Knowledge Needed
-* Understanding of above tools.
+### Knowledge needed:
+* Understanding of above tools
 * DOM manipulation
-* Animation Inserts
+* Animation inserts
+* Page reloads
+* Set timers
 
-## Contributers
+Scope of functionalities 
+Examples of use
 
-For more information please source credit of: [Wiki](https://www.wikihow.com/Play-Hangman)
+### Tasks wanted accomplished with game:
 
-
-
-
-
-
-
-Tasks wanted accomplished with game:
-
-
-
-Steps to making the code:
+### Steps to making the code:
 Start with creating ("let") variables that are able to change throughout the game, that help you log your correct and wrong guesses.
 Next make ("const") variables that do not change throughout the game to help set limits on the amount of wrong guesses, hold values, and set arrays.
 Be sure to define a wordBank array that holds the words used in the game.
@@ -61,3 +64,13 @@ The listener will be the core operator of our game and manager of the game flow.
 2. If the input guessed is incorrect, the wrong guess will count a strike against you. With each incorrect guess the listener is checking if the maximum wrong number has been reached.
 3. As the event listener is managing the game when the game has ended with either a winner or a loser, the game will trigger a delayed restart.
 Create a function called ("restart()") that reloads the page when the game has resulted in a winner or a loser.
+
+## Features:
+
+## Contributers & resources:
+
+For more information please source credit of: [Wiki](https://www.wikihow.com/Play-Hangman)
+
+
+
+
