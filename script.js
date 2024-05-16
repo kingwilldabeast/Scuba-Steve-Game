@@ -8,7 +8,7 @@ const button = document.querySelector(`#submitButton`);
 // This is the set array for the game that will help us index each letter
 // const secretWord = ['h','i','p','p','o','p','o','t','a','m','u','s'];
 
-const wordBank = ['hippopotamus', 'elephant', 'giraffe', 'rhinoceros', 'zebra'];
+const wordBank = ['hippopotamus', 'fergalicious'];
 
 
 function word() {
@@ -27,7 +27,9 @@ button.addEventListener (`click`, (event) => {
         } 
     } 
     if (correct === secretWord.length) {document.querySelector(`h3`).innerText = winner;
-    setTimeout(() => restart(winner), 5000)}
+    audio = new Audio('Ferg.mp4');
+    audio.play();
+    setTimeout(() => restart(winner), 12000)}
     if (!secretWord.includes(input)){
         wrong = wrong + 1 
         if (wrong == maxWrong) {
