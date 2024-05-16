@@ -39,3 +39,25 @@ Begin by designing a wireframe.
 ## Contributers
 
 For more information please source credit of: [Wiki](https://www.wikihow.com/Play-Hangman)
+
+
+
+
+
+
+
+Tasks wanted accomplished with game:
+
+
+
+Steps to making the code:
+Start with creating ("let") variables that are able to change throughout the game, that help you log your correct and wrong guesses.
+Next make ("const") variables that do not change throughout the game to help set limits on the amount of wrong guesses, hold values, and set arrays.
+Be sure to define a wordBank array that holds the words used in the game.
+Creata a function that will randomly select words from that bank.
+To trigger the game, create an event listener that initiates the game logic when clicked.
+The listener will be the core operator of our game and manager of the game flow.
+1. It will check the input guessed to see if it matches any words in the secret word. If there is a match the board display will update with the letter inside the correct tile. 
+2. If the input guessed is incorrect, the wrong guess will count a strike against you. With each incorrect guess the listener is checking if the maximum wrong number has been reached.
+3. As the event listener is managing the game when the game has ended with either a winner or a loser, the game will trigger a delayed restart.
+Create a function called ("restart()") that reloads the page when the game has resulted in a winner or a loser.

@@ -1,13 +1,22 @@
+let wrong = 0;
+let correct = 0;
 const maxWrong = 4;
-const boardLength = 12;
 const skull = [1,2,3,4]
 const loser = `Defeated! 😭`
 const winner = `Congratulations!`
 const button = document.querySelector(`#submitButton`);
 // This is the set array for the game that will help us index each letter
-const secretWord = ['h','i','p','p','o','p','o','t','a','m','u','s'];
-let wrong = 0;
-let correct = 0;
+// const secretWord = ['h','i','p','p','o','p','o','t','a','m','u','s'];
+
+const wordBank = ['hippopotamus', 'elephant', 'giraffe', 'rhinoceros', 'zebra'];
+
+
+function word() {
+    return wordBank[Math.floor(Math.random() * wordBank.length)];
+}
+
+let secretWord = word().split('');
+
 
 button.addEventListener (`click`, (event) => {
     let input = document.querySelector(`#textInput`).value;
@@ -23,7 +32,7 @@ button.addEventListener (`click`, (event) => {
         wrong = wrong + 1 
         if (wrong == maxWrong) {
             document.querySelector(`h3`).innerText = loser;
-            setTimeout(() => restart(loser), 15000);
+            setTimeout(() => restart(loser), 16000);
             document.querySelector("video").style.opacity = 1
             document.querySelector("video").play();
             // https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
