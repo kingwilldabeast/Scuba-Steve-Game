@@ -1,4 +1,4 @@
-<img src=“./WF1.png”>
+<img src="./WF1.png">
 
 # Lets Play Scuba-Steve
 **Object:** Help Scuba Steve guess the secret word before he gains too many heads. Each letter guessed will be evaluated as truthy/falsy till the game results in a win or a loss.
@@ -69,7 +69,8 @@ Create a function called ("restart()") that reloads the page when the game has r
 
 ## Contributers & resources:
 For more information on hangman games, source credit of: [Wiki](https://www.wikihow.com/Play-Hangman)
+
 For more uses of confetti and muniplation of them, source credit of: [Confetti](https://confetti.js.org/more.html)
-
-
+https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
+https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide
 
