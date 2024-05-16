@@ -10,26 +10,29 @@ const button = document.querySelector(`#submitButton`);
 
 const wordBank = ['hippopotamus', 'fergalicious'];
 
-
 function word() {
     return wordBank[Math.floor(Math.random() * wordBank.length)];
 }
-
 let secretWord = word().split('');
-
 
 button.addEventListener (`click`, (event) => {
     let input = document.querySelector(`#textInput`).value;
     for (let i = 0; i < secretWord.length; i++) {
         if (input == secretWord[i]) {
-            document.querySelectorAll(`li`)[i].innerText = input;
-            correct++;
+            if(!document.querySelectorAll(`li`)[i].innerText) {
+                document.querySelectorAll(`li`)[i].innerText = input;
+                correct++;
+            }
         } 
     } 
-    if (correct === secretWord.length) {document.querySelector(`h3`).innerText = winner;
-    audio = new Audio('Ferg.mp4');
-    audio.play();
-    setTimeout(() => restart(winner), 12000)}
+
+    if (correct === secretWord.length) {
+        document.querySelector(`h3`).innerText = winner;
+        audio = new Audio('Ferg.mp4');
+        audio.play();
+        setTimeout(() => restart(winner), 12000)
+    }
+
     if (!secretWord.includes(input)){
         wrong = wrong + 1 
         if (wrong == maxWrong) {
