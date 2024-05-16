@@ -1,19 +1,21 @@
-let wrong = 0;
-let correct = 0;
+/*-------------------------------- Constants --------------------------------*/
 const maxWrong = 4;
 const skull = [1,2,3,4]
 const loser = `Defeated! 😭`
 const winner = `Congratulations!`
+// The below constant 
 const button = document.querySelector(`#submitButton`);
-// This is the set array for the game that will help us index each letter
-
+// The below constant is the set hangman word string for the game
 const wordBank = ['hippopotamus', 'fergalicious'];
-
-function word() {
-    return wordBank[Math.floor(Math.random() * wordBank.length)];
-}
+/*-------------------------------- Variables --------------------------------*/
+let wrong = 0;
+let correct = 0;
+// The above variables allow us to update the progress of the game
 let secretWord = word().split('');
+// The above variable allows us to change the string to an array to help log the index of each letter
+/*------------------------ Cached Element References ------------------------*/
 
+/*----------------------------- Event Listeners -----------------------------*/
 button.addEventListener (`click`, (event) => {
     let input = document.querySelector(`#textInput`).value;
     for (let i = 0; i < secretWord.length; i++) {
@@ -52,13 +54,18 @@ button.addEventListener (`click`, (event) => {
     }}
 }   
 )
-
+/*-------------------------------- Functions --------------------------------*/
+// The below function filters through the length of our wordbank and selects a word at random.
+function word() {
+    return wordBank[Math.floor(Math.random() * wordBank.length)];
+}
+// The function below will reload the page when the game has came to an end.
 function restart (game) { 
     if (game === loser || winner) {
-        document.querySelector("video").style.opacity = 1
         window.location.reload();
     }
 }
+// The function below holds the code for the confetti that will be deployed in our button click.
 function awards() {
 const defaults = {
     spread: 360,
@@ -75,4 +82,3 @@ const defaults = {
     scalar: 4,
   });
 }
-//https://confetti.js.org/more.html

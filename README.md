@@ -68,9 +68,8 @@ Create a function called ("restart()") that reloads the page when the game has r
 ## Features:
 
 ## Contributers & resources:
-
-For more information please source credit of: [Wiki](https://www.wikihow.com/Play-Hangman)
-
+For more information on hangman games, source credit of: [Wiki](https://www.wikihow.com/Play-Hangman)
+For more uses of confetti and muniplation of them, source credit of: [Confetti](https://confetti.js.org/more.html)
 
 
 
