@@ -24,7 +24,7 @@ let secretWord = word().split('');
 // The below event listener is operating as the functioning core for our game.
 button.addEventListener (`click`, () => {
     // The lines below logs the inputs value/letter guessed.
-    let input = document.querySelector(`#textInput`).value;
+    let input = document.querySelector(`#textInput`).value.toLowerCase();
     // The guessed letter goes through the length of the word checking for a match.
     for (let i = 0; i < secretWord.length; i++) {
         // When the guessed letter matches the letter at [i] in the secretword.
