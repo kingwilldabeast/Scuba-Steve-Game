@@ -10,47 +10,46 @@
 </head>
 <body>
     <div class="main">
-    <h1>Scuba Steve</h1>
-    <div class="board">
-        <ul>
-            <li class="opening"></li>
-            <li class="opening"></li>
-            <li class="opening"></li>
-            <li class="opening"></li>
-            <li class="opening"></li>
-            <li class="opening"></li>
-            <li class="opening"></li>
-            <li class="opening"></li>
-            <li class="opening"></li>
-            <li class="opening"></li>
-            <li class="opening"></li>
-            <li class="opening"></li>
+        <h1>Scuba Steve</h1>
+        <div class="board">
+            <ul>
+                <li class="opening"></li>
+                <li class="opening"></li>
+                <li class="opening"></li>
+                <li class="opening"></li>
+                <li class="opening"></li>
+                <li class="opening"></li>
+                <li class="opening"></li>
+                <li class="opening"></li>
+                <li class="opening"></li>
+                <li class="opening"></li>
+                <li class="opening"></li>
+                <li class="opening"></li>
+            </ul>
+        </div>
+        <div class="data">
+            <input id="textInput" type="text" placeholder="Guess A Letter"/>
+            <button id="submitButton"> Submit </button>
+        </div>
+        <section id="banner">
+            <h3></h3>
+        </section>
+        <video controls width="250">
+            <source src="/lose.mp4" type="video/mp4"/>
+        </video>
+    </div>
+    <h4 class="missed"> Strikes: 
+         <b id="wrong"> 0 </b>
+         <b id="max"> / 4 </b> 
+    </h4>
+    <div class="end">
+        <ul id="skull">
+            <li class="strike"></li>
+            <li class="strike"></li>
+            <li class="strike"></li>
+            <li class="strike"></li>
         </ul>
     </div>
-    <div class="data">
-        <input id="textInput" type="text" placeholder="Guess A Letter"/>
-        <button id="submitButton"> Submit </button>
- </div>
-    <section id="banner">
-        <h3></h3>
-    </section>
-    <video controls width="250">
-        <source id="s1" src="/lose.mp4" type="video/mp4"/>
-        <source id="s2" src="/hippo.mp4" type="video/mp4"/>
-    </video>
-</div>
-<h4 class="missed"> Strikes: 
-    <b id="wrong"> 0 </b>
-    <b id="max"> / 4 </b> 
-</h4>
-<div class="end">
-    <ul id="skull">
-            <li class="strike"></li>
-            <li class="strike"></li>
-            <li class="strike"></li>
-            <li class="strike"></li>
-    </ul>
-</div>
     <div id="pic">
          <img src="https://preview.redd.it/m23n51vspch31.jpg?width=1080&crop=smart&auto=webp&s=86c5a5ee6b2d2288d906ac5d9e7fc63d7c3b5f42" alt="Scuba Steve"> 
     </div>

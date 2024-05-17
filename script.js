@@ -27,7 +27,6 @@ button.addEventListener (`click`, (event) => {
             }
         }
     } 
-
     if (correct === secretWord.length) {
         document.querySelector(`h3`).innerText = winner;
         audio = new Audio('Ferg.mp4');
@@ -35,7 +34,6 @@ button.addEventListener (`click`, (event) => {
         setTimeout(() => restart(winner), 12000)
         awards()
     }
-
     if (!secretWord.includes(input)){
         wrong = wrong + 1 
         if (wrong == maxWrong) {
@@ -66,18 +64,18 @@ function restart (game) {
 }
 // The function below holds the code for the confetti that will be deployed in our button click.
 function awards() {
-const defaults = {
-    spread: 360,
-    ticks: 200,
-    gravity: 0,
-    decay: .95,
-    startVelocity: 40,
-    shapes: ["hearts", "star"],
-    colors: ["fad905", "08f5b2", "6ff508", "f675ff"],
-  };
-  confetti({
-    ...defaults,
-    particleCount: 450,
-    scalar: 4,
-  });
+    const defaults = {
+        spread: 360,
+        ticks: 200,
+        gravity: 0,
+        decay: .95,
+        startVelocity: 40,
+        shapes: ["hearts", "star"],
+     colors: ["fad905", "08f5b2", "6ff508", "f675ff"],
+     };
+    confetti({
+        ...defaults,
+        particleCount: 450,
+        scalar: 4,
+     });
 }

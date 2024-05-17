@@ -1,6 +1,7 @@
 h1 {
     font-size: 75px;
     margin: 0px;
+    background-color: rgba(3, 190, 140, 0.722);
 }
 body {
     display: flex;
@@ -8,7 +9,7 @@ body {
     align-items: center;
     justify-content: center;
     max-height: 100%;
-    background-image: url('https://as2.ftcdn.net/v2/jpg/07/96/20/99/1000_F_796209993_FHnGLKxG7ZdzIizN4Y5QBKAcTA8QqJDU.jpg');
+    background-image: url('https://wallpapercave.com/wp/wp10846526.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     color:white;
