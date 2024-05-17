@@ -79,3 +79,4 @@ Image and video contect attached to background credited from the movie ***Big Da
 Attached audio content credited from Fergie performing Fergalicious produced by A&M Records.
 
 # Finished product screenshot:
+<img src="./Screenshot.png">
