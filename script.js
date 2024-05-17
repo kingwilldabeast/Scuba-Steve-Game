@@ -9,7 +9,7 @@ let button = document.querySelector(`#submitButton`);
 button.disabled = false;
 
 // The below constant is the set hangman word string for the game.
-const wordBank = ['hippopotamus', 'fergalicious'];
+const wordBank = ['hippopotamus', 'fergalicious', 'babyproofing'];
 
 /*-------------------------------- Variables --------------------------------*/
 // The below variables allow us to update the progress of the game.

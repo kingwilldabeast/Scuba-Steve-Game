@@ -1,6 +1,0 @@
-babyproofing
-breakthrough
-bootylicious
-flawlessness
-lighthearted
-minimalistic
