@@ -2,6 +2,9 @@ h1 {
     font-size: 75px;
     margin: 0px;
     background-color: rgba(3, 190, 140, 0.722);
+    border: 1px solid blue;
+    padding: 5px;
+    border-radius: 10px;
 }
 body {
     display: flex;
