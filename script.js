@@ -4,10 +4,6 @@ const skull = [1,2,3,4]
 const loser = `Defeated! 😭`
 const winner = `Congratulations!`
 
-// The below constant is button waiting for its click in the event listener.
-let button = document.querySelector(`#submitButton`);
-button.disabled = false;
-
 // The below constant is the set hangman word string for the game.
 const wordBank = ['hippopotamus', 'fergalicious', 'babyproofing'];
 
@@ -41,12 +37,11 @@ document.addEventListener('keyup', function(event) {
     } 
 
     // If the correct count is equal to the length of the secretWord,
-    // the lines below disable the button to prevent user from making more guesses,
     // shows the winner text, play the winner tune,
     // set timer to reset the game after 9000ms, and shows confetti.
     if (correct === secretWord.length) {
-        button.disabled = true
-        document.querySelector(`h3`).innerText = winner;
+        document.querySelector('#banner').innerText = winner;
+        document.querySelector('#banner').style.opacity = 1;
         audio = new Audio('Ferg.mp4');
         audio.play();
         setTimeout(() => restart(winner), 9000)
@@ -58,12 +53,11 @@ document.addEventListener('keyup', function(event) {
     if (input && !secretWord.includes(input)){
         wrong = wrong + 1 
         // If the wrong count reaches the maxWrong
-        // the lines below disable the button, show the loser text, 
         // set a timer to restart after 15000ms, play the loser video, 
         // and show the wrong count.
         if (wrong == maxWrong) {
-            button.disabled = true
-            document.querySelector(`h3`).innerText = loser;
+            document.querySelector('#banner').innerText = loser;
+            document.querySelector('#banner').style.opacity = 1;
             setTimeout(() => restart(loser), 15000);
             document.querySelector("video").style.opacity = 1
             document.querySelector("video").play();
@@ -88,7 +82,7 @@ function restart (game) {
         window.location.reload();
     }
 }
-// The function below holds the code for the confetti that will be deployed in our button click.
+// The function below holds the code for the confetti that will be deployed upon a correct guess
 function awards() {
     const defaults = {
         spread: 360,

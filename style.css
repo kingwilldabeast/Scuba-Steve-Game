@@ -109,13 +109,16 @@ ul {
     height: 100px;
     width: 375px;
     margin-bottom: 1px;
-}
-h3 {
+    border: 1px solid blue;
+    padding: 5px;
+    border-radius: 10px;
+    opacity: 0;
     font-size: 40px;
     text-align: center;
     color: yellow;
     background-color: rgba(101, 250, 208, 0.6);
 }
+
 video {
     width: 600px;
     opacity: 0;
