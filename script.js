@@ -22,9 +22,11 @@ let secretWord = word().split('');
 
 /*----------------------------- Event Listeners -----------------------------*/
 // The below event listener is operating as the functioning core for our game.
-button.addEventListener (`click`, () => {
+document.addEventListener('keyup', function(event) {
     // The lines below logs the inputs value/letter guessed.
-    let input = document.querySelector(`#textInput`).value.toLowerCase();
+    const key = event.key;
+    if (!(/^[a-zA-Z]$/.test(key))) {return}
+    let input = key.toLowerCase();
     // The guessed letter goes through the length of the word checking for a match.
     for (let i = 0; i < secretWord.length; i++) {
         // When the guessed letter matches the letter at [i] in the secretword.
