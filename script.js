@@ -3,6 +3,7 @@ const maxWrong = 4;
 const skull = [1,2,3,4]
 const loser = `Defeated! 😭`
 const winner = `Congratulations!`
+const tilerack = document.querySelector("#tilerack")
 
 // The below constant is the set hangman word string for the game.
 const wordBank = ['hippopotamus', 'fergalicious', 'babyproofing'];
@@ -17,6 +18,18 @@ let correct = 0;
 let secretWord = word().split('');
 
 /*----------------------------- Event Listeners -----------------------------*/
+//populates tilerack with number of tiles correspond to length of word
+window.addEventListener('load', () => {
+    // console.log('page is loaded')
+    for (let i = 0; i < secretWord.length; i++) {
+        const tile = document.createElement('li');
+        tile.classList.add('opening')
+        tilerack.appendChild(tile)
+
+    }
+})
+
+
 // The below event listener is operating as the functioning core for our game.
 document.addEventListener('keyup', function(event) {
     // The lines below logs the inputs value/letter guessed.
