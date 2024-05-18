@@ -84,6 +84,9 @@ ul {
     margin: 1px;
     max-height: 20px;
     background-color: rgba(206, 64, 109, 0.6);
+    border-radius: 4px;
+    border: 1px solid red;
+    padding: 3px;
 }
 .end{
     display: flex;
@@ -103,7 +106,7 @@ ul {
     top: 33%;
     left: 0%;
     position: absolute;
-    width: 100%; 
+    width: 100%;
 }
 #banner {
     height: 100px;
