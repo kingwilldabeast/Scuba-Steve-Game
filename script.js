@@ -1,12 +1,19 @@
 /*-------------------------------- Constants --------------------------------*/
 const maxWrong = 4;
-const skull = [1,2,3,4]
+const skull = ['','','','']
 const loser = `Defeated! 😭`
 const winner = `Congratulations!`
 const tilerack = document.querySelector("#tilerack")
+const strikes = document.querySelectorAll(`.strike`)
 
 // The below constant is the set hangman word string for the game.
-const wordBank = ['hippopotamus', 'fergalicious', 'babyproofing'];
+const wordBank = ["apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew",
+"kiwi", "lemon", "mango", "nectarine", "orange", "papaya", "quince", "raspberry",
+"strawberry", "tangerine", "ugli", "vanilla", "watermelon", "xigua", "yellow",
+"zucchini", "avocado", "blueberry", "cantaloupe", "dragonfruit", "eggplant",
+"fennel", "guava", "huckleberry", "indigo", "jackfruit", "kumquat", "lime",
+"mulberry", "nutmeg", "olive", "pomegranate", "quinoa", "radish", "spinach",
+"tomato", "umbrella", "violet", "wasabi", "xanthan", "yam", "zebra", 'hippopotamus', 'fergalicious', 'babyproofing'];
 
 /*-------------------------------- Variables --------------------------------*/
 // The below variables allow us to update the progress of the game.
@@ -64,6 +71,12 @@ document.addEventListener('keyup', function(event) {
     // If the user makes a wrong guess or If the guessed letter is not in the secretWord array
     // the below lines increment the wrong count.
     if (input && !secretWord.includes(input)){
+        // With each wrong guess a strike will be logged in the [i] throughout the strikes length.
+        for (let i = 0; i < skull.length; i++) {
+            if (wrong >= skull[i]) {
+                strikes[wrong].innerText = input
+            }
+        }
         wrong = wrong + 1 
         // If the wrong count reaches the maxWrong
         // set a timer to restart after 15000ms, play the loser video, 
@@ -76,12 +89,6 @@ document.addEventListener('keyup', function(event) {
             document.querySelector("video").play();
         }
         document.querySelector(`b`).innerText = wrong  
-    }
-    // With each wrong guess a strike will be logged in the [i] throughout the strikes length.
-    for (let i = 0; i < skull.length; i++) {
-        if (wrong >= skull[i]) {
-            document.querySelectorAll(`.strike`)[i].innerText = `💀`
-        }
     }
 })
 /*-------------------------------- Functions --------------------------------*/
